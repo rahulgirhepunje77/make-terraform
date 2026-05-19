@@ -77,6 +77,8 @@ resource "aws_instance" "kind_server" {
       "sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl",
 
       "sudo apt-get install -y make",
+      
+      "kind create cluster --config k8s/kind-config.yaml --name terraform-kind",
 
       "docker --version",
 
